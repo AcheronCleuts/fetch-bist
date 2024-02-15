@@ -6,9 +6,6 @@ async function fetchData() {
       const response = await axios.get("https://www.oyakyatirim.com.tr/piyasa-verileri/XUTUM");
       const html = response.data;
   
-      // HTML'i analiz etmek için bir HTML ayrıştırma kütüphanesi kullanabilirsiniz (örneğin, cheerio).
-  
-      // Örnek bir cheerio kullanımı:
       const cheerio = require("cheerio");
       const $ = cheerio.load(html);
       const rows = $("div.green tbody tr");
